@@ -1,0 +1,128 @@
+$dark-yellow: #F8C444;
+$bg-yellow: #FDE583;
+$bg-gray: #DCDBDF;
+$bg-green: #97BF4E;
+$bg-red: #FE975E;
+$bg-blue: #71B6D5;
+$bg-purple: #AB85B8;
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: calc(6.3rem * 2);
+  height: calc(8.8rem * 2);
+  border: 1rem solid $dark-yellow;
+  border-radius: 1rem;
+  box-sizing: border-box;
+
+  &.grass, &.bug, &.poison {
+    background-color: $bg-green;
+  }
+
+  &.fire, &.ground, &.fighting {
+    background-color: $bg-red;
+  }
+
+  &.electric {
+    background-color: $bg-yellow;
+  }
+
+  &.water {
+    background-color: $bg-blue;
+  }
+
+  &.psychic, &.dark {
+    background-color: $bg-purple;
+  }
+
+  &.normal, &.fairy {
+    background-color: $bg-gray;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 10px 0 10px;
+
+    .left-header-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      .name {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: -3px;
+      }
+    }
+    .right-header-container {
+      display: flex;
+      align-items: flex-end;
+      color: red;
+      font-weight: 600;
+      font-size: 13px;
+      .hp {
+        margin-bottom: -2px;
+      }
+      img {
+        align-self: center;
+        width: 15px;
+        padding-left: 3px;
+      }
+    }
+  }
+  .image-section-container {
+    .image-container {
+      margin: 0 10px;
+      border: 3px solid $dark-yellow;
+      background-color: rgba(255,255,255, .5); 
+    }
+    .image-caption {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 5px;
+      font-size: 5px;
+    }
+  }
+
+  .moves-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    .move-container {
+      display: flex;
+      align-items: center;
+      margin: 5px;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+        padding-bottom: 5px;
+        border-bottom: 1px solid black;
+      }
+
+      .types-icon-container {
+        font-size: 8px;
+        img {
+          width: 15px;
+          padding: 5px;
+        }
+      }
+
+      .move-center-container {
+        display: flex;
+        text-align: left;
+        font-size: 8px;
+        font-style: italic;
+        .move-name {
+          font-style: normal;
+          font-weight: 700;
+        }
+      }
+      .move-damage {
+        margin: 3px;
+      }
+    }
+  }
+}
