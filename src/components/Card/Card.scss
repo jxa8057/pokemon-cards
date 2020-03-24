@@ -19,7 +19,7 @@ $bg-purple: #AB85B8;
     background-color: $bg-green;
   }
 
-  &.fire, &.ground, &.fighting {
+  &.fire, &.ground, &.fighting, &.rock {
     background-color: $bg-red;
   }
 
@@ -27,7 +27,7 @@ $bg-purple: #AB85B8;
     background-color: $bg-yellow;
   }
 
-  &.water {
+  &.water, &.ice {
     background-color: $bg-blue;
   }
 
@@ -35,7 +35,7 @@ $bg-purple: #AB85B8;
     background-color: $bg-purple;
   }
 
-  &.normal, &.fairy {
+  &.normal, &.fairy, &.dragon {
     background-color: $bg-gray;
   }
 
@@ -50,6 +50,12 @@ $bg-purple: #AB85B8;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-end;
+      z-index:1;
+      .type {
+        margin-bottom: -3px;
+        font-size: 6px;
+        font-weight: 700;
+      }
       .name {
         font-size: 14px;
         font-weight: 700;
@@ -57,18 +63,19 @@ $bg-purple: #AB85B8;
       }
     }
     .right-header-container {
+      height: 100%;
       display: flex;
+      justify-content: flex-end;
       align-items: flex-end;
       color: red;
       font-weight: 600;
       font-size: 13px;
       .hp {
         margin-bottom: -2px;
+        padding-right: 3px;
       }
       img {
-        align-self: center;
         width: 15px;
-        padding-left: 3px;
       }
     }
   }
@@ -104,9 +111,9 @@ $bg-purple: #AB85B8;
 
       .types-icon-container {
         font-size: 8px;
+        padding: 5px;
         img {
-          width: 15px;
-          padding: 5px;
+          width: 12px;
         }
       }
 

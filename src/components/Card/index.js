@@ -62,10 +62,12 @@ const Card = props => {
   }).type.name;
 
   const displayName = firstLetterToUpperCase(name);
+  const displayType = firstLetterToUpperCase(type);
   return (
     <div className={`card-container ${type}`}>
       <div className="header-container">
         <div className="left-header-container">
+          <div className="type">{displayType} Pokémon</div>
           <div className="name">{displayName}</div>
         </div>
         <div className="right-header-container">
